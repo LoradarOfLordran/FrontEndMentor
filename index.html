@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <section class="section sec-1">
+    <div class="card card-back">
+      <div class="card-back-line"></div>
+      <div class="card-back-cvv">123</div>
+    </div>
+    <div class="card card-front">
+      <div class="card-front-circles">
+      </div>
+      <div class="card-front-data">
+        <div class="card-front-data-1">1234 5678 9123 0000</div>
+        <div class="card-front-data-2">
+          <div class="card-name">Jose Jairo</div>
+          <div class="card-date"><div class="date-month">00</div>/<div class="date-year">00</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section sec-2">
+    <div class="modal-card">
+      <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+      <H2>THANK YOU!</H2>
+      <p>We've added you card details</p>
+      <button>Continue</button>
+    </div>
+    <form class="card-form">
+      <label for="name">CARDHOLDER NAME</label>
+      <input id="name" type="text" placeholder="e.g. Jose Jairo" autocomplete="off">
+      <span class="error-name">The name field is empty</span>
+      <br>
+      <label for="number">CARD NUMBER</label>
+      <input id="number" type="text" placeholder="e.g. 1234 5678 9123 0000" autocomplete="off">
+      <span class="error-number">The card number must have 16 digits</span>
+      <br>
+      <div class="container-inputs">
+        <div class="dates">
+          <label for="month">EXP. DATE (MM/YY)</label>
+          <div class="dates-inputs">
+            <div class="month">
+              <input id="month" type="text" placeholder="MM" autocomplete="off">
+            </div>
+            <div class="year">
+              <input id="year" type="text" placeholder="YY" autocomplete="off">
+            </div>
+          </div>
+          <span class="error-date">
+            The month or year field is empty or incorrect</span>
+        </div>
+        <div class="cvv">
+          <label for="cvv">CVV</label>
+          <input id="cvv" type="text" placeholder="e.g. 123" autocomplete="off">
+          <span class="error-cvv">The cvv field must have 3 digits</span>
+        </div>
+      </div>
+      <br>
+      <input type="submit" value="Confirm">   
+    </form>
+  </section>
+</body>
+<script src="./app.js"></script>
+</html>
